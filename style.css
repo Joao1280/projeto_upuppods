@@ -40,8 +40,11 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
+  height: 100%;
   margin: 56px auto 0px;
   padding: 0 24px;
+  overflow: hidden;
+  overflow-y: scroll ;
 }
 /* profile */
 #profile {
@@ -165,7 +168,7 @@ footer {
   font-size: 14px;
 }
 /* media queries */
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   :root {
     --bg-url: url(./UPPODS/back-desk.jpg);
   }
