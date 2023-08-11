@@ -6,7 +6,7 @@
 
 :root {
   --text-color: black;
-  --bg-url:url(./UPPODS/Background.light.jpg);
+  --bg-url: url(./UPPODS/Background.light.jpg);
   --stroke-color: rgba(36, 34, 34, 0.32);
   --highlight-color: rgba(22, 21, 21, 0.356);
   --switch-bg-url: url(./assets/sun.svg);
@@ -14,12 +14,11 @@
 
 .dark {
   --text-color: white;
-  --bg-url:url(./UPPODS/Background.dark.jpg);
+  --bg-url: url(./UPPODS/Background.dark.jpg);
   --stroke-color: rgba(170, 160, 160, 0.479);
   --highlight-color: rgba(255, 245, 245, 0.616);
   --switch-bg-url: url(./assets/moon_stars.svg);
 }
-
 
 body {
   /*
@@ -30,7 +29,8 @@ body {
   */
 
   /* background: color image repeat position (transformado em uma shorhand/atalho) */
-  background: var(--bg-url)  no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -72,7 +72,7 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-  
+
   position: absolute;
   top: 50%;
   left: 0;
@@ -82,8 +82,7 @@ body * {
 
 .dark #switch button {
   right: 0;
-  left:initial;
-
+  left: initial;
 }
 
 #switch span {
@@ -96,14 +95,13 @@ body * {
   border-radius: 9999px;
 }
 
-
 /* links */
 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  
+
   padding: 24px 0px;
 }
 
@@ -148,7 +146,6 @@ ul li a:hover {
   padding: 16px;
 
   transition: background 0.2s;
-  
 }
 
 #social_links a:hover {
@@ -156,8 +153,18 @@ ul li a:hover {
   border-radius: 50%;
 }
 
-footer{
+footer {
   padding: 24px 0px;
   text-align: center;
   font-size: 14px;
+}
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./UPPODS/back-desk.jpg);
+  }
+
+  .dark {
+    --bg-url: url(./UPPODS/back-desk-dark.jpg);
+  }
 }
